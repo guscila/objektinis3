@@ -165,8 +165,8 @@ Studentas ivesk() { // studentų įvesties fukcija
         laik.setRez(laik.egzas() * 0.6 + double(sum) / double(laik.pazymiai().size()) * 0.4); // studento galutinio vidurkio apskaičiavimas
         laik.setMediana(mediana(laik.pazymiai()));  // medianos apskaičiavimo funkcijos iškvietimas
     }
-    RuleOfThreeTest(laik);  // Rule of Three testavimas
-    Zmogus A;   // Žmogaus objekto kūrimo demonstracija
+    //RuleOfThreeTest(laik);  // Rule of Three testavimas
+    //Zmogus A;   // Žmogaus objekto kūrimo demonstracija
     return laik;
 }
 
@@ -393,7 +393,7 @@ void StudentuRusiavimas(cont& grupe, string name) {    // studentų rūšiavimo 
     rusiavimas.save(text, grupe.size());
 }
 
-void RuleOfThreeTest(const Studentas& laik) {
+void RuleOfThreeTest(const Studentas& laik) {   // RuleOfThree testavimas
     cout << string(50, '-') << endl;
     cout << string(50, '-') << endl;
     cout << "Rule Of Three testavimas:\n";
