@@ -1,5 +1,5 @@
-# 2Lab.
-v1.5 release
+# 3Lab.
+v3.0 release
 ## Programos aprašymas
 Programa leidžia naudotojui įvesti rankiniu būdu arba nuskaityti studentų duomenis ( vardą ir pavardę, atliktų namų darbų rezultatus (10-balėje sistemoje), egzamino balą ) ir suskaičiuoja galutinį balą pagal formulę ( *pav.1* ). Visos programos veikimo metu naudotojas gali pasirinkti kokio tipo ( vector ar list ) konteineris bus naudojamas. Įvesdamas duomenis rankiniu būdu naudotojas gali namų darbų ir egzamino rezultatuts įvesti arba atsitiktinai sugeneruoti. Naudotojui taip pat leidžiama sugeneruoti failą su studentų vardais, namų darbų ir egzamino rezultatais, kurį vėliau gali naudoti programos testavimo funkcijos metu. Failų testavimo metu, naudotojui pasirinkus failą, yra atliekama greičio spartos analizė naudojant vieną iš trijų studentų kategorizacijos strategijų bei suteikiant naudotojui pasirinkimą kokia tvarka bus surūšiuoti studentų *'Kietiakų'<sup>1</sup>* ir *'Vargšiukų'<sup>2</sup>* failai. Rezultatai yra išvedami į terminalą arba į failą priklausomai nuo pasirinktos funkcijos. Rezultatų, failų ir generacijos formatai yra aprašyti žemiau.
 ```
@@ -12,7 +12,7 @@ Programa leidžia naudotojui įvesti rankiniu būdu arba nuskaityti studentų du
   <summary><strong> Programos diegimo instrukcija </strong></summary>
  
 ## Programos diegimo instrukcija
-1. Nukopijuokite projekto direktoriją ir paruošiame "build" direktoriją, kur nukeliaus visi mūsų sukurti failai:
+1. Nukopijuojame projekto direktoriją ir paruošiame "build" direktoriją, kur nukeliaus visi mūsų sukurti failai:
 ```
 cd projekto_direktorija
 mkdir build
@@ -206,7 +206,25 @@ Studentas& operator = (const Studentas& copy) {
 }
 ```
 </details>
- 
+
+#### [v2.0](https://github.com/guscila/objektinis2/tree/v2.0) pokyčiai:
+Versija v1.5 optimizuota; sukurtas ir pridėtas UnitTestTestavimas projektas, kuriame atlikti 5 sėkmingi testai naudojant VisualStudio integruotą testavimo sistemą; pridėta projekto [HTML dokumentacija](https://github.com/guscila/objektinis2/tree/v2.0/v0.1-naujas/html) ir LaTeX dokumentacija [PDF](https://github.com/guscila/objektinis2/blob/v2.0/v0.1-naujas/latex/2lab__LATEX_dokumentacija.pdf) formatu; sutvarkyti ir atnaujinti `CMakeLists.txt` ir `run.bat` failai.
+<details>
+ <summary><strong> UnitTestTestavimas </strong></summary>
+
+### UnitTestTestavimas
+#### Atlikti testai:
+* DefaultConstructor - Studento klasės bazinio konstruktoriaus testas
+* ParametrizedConstructor - parametruoto konstruktoriaus testas
+* CopyConstructor - kopijavimo konstruktoriaus testas
+* CopyAssignment - kopijavimo priskyrimo operatoriaus testas
+* Getters - geterių testas
+#### Testavimo kodas
+[UnitTestTestavimas](https://github.com/guscila/objektinis2/blob/v2.0/UnitTestTestavimas/UnitTestTestavimas.cpp)
+#### UnitTestTestavimas rezultatai:
+![UnitTestTestavimoRezultatai](foto/UnitTesting.png)
+</details>
+
 ## Programos failai
 <details>
   <summary><strong> Failai </strong></summary>
