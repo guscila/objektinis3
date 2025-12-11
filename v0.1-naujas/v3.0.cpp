@@ -23,19 +23,15 @@ int main()
             cout << string(50, '-') << endl;
             NuskaitymasIsFailo(grupe, name);   // failo nuskaitymo funkcijos iškvietimas
             IsvedimasIFaila(grupe, "rezultatai");  // failo įrašymo funkcijos iškvietimas
-            return 0;
         }
         else if (pasirinkimas == 3) {
             cout << string(50, '-') << endl;
             FailuGeneravimas(name); // failo generavimo funkcijos iškvietimas
-            return 0;
         }
         else if (pasirinkimas == 4) {
             int strategija = m.strategija;  // naudotojo pasirinkta strategija
             FailuTestavimas(grupe, vargsiukai, kietiakai, name, strategija);    // failų testavimo funkcijos iškvietimas
-            return 0;
         }
-        return 0;
     }
     else {  // veiksmai su vector konteineriu
         vector<Studentas> grupe, vargsiukai, kietiakai;
@@ -55,18 +51,18 @@ int main()
             cout << string(50, '-') << endl;
             NuskaitymasIsFailo(grupe, name);   // failo nuskaitymo funkcijos iškvietimas
             IsvedimasIFaila(grupe, "rezultatai");  // failo įrašymo funkcijos iškvietimas
-            return 0;
         }
         else if (pasirinkimas == 3) {
             cout << string(50, '-') << endl;
             FailuGeneravimas(name); // failo generavimo funkcijos iškvietimas
-            return 0;
         }
         else if (pasirinkimas == 4) {
             int strategija = m.strategija;  // naudotojo pasirinkta strategija
             FailuTestavimas(grupe, vargsiukai, kietiakai, name, strategija);    // failų testavimo funkcijos iškvietimas
-            return 0;
         }
-        return 0;
     }
+    std::cout << "\n\nPaspauskite bet kuri klavisa, kad uzdarytumete programa...";
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.get();
+    return 0;
 }
