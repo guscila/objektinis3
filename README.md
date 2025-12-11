@@ -12,41 +12,18 @@ Programa leidžia naudotojui įvesti rankiniu būdu arba nuskaityti studentų du
   <summary><strong> Programos diegimo instrukcija </strong></summary>
  
 ## Programos diegimo instrukcija
-1. Nukopijuojame projekto direktoriją ir paruošiame "build" direktoriją, kur nukeliaus visi mūsų sukurti failai:
-```
-cd projekto_direktorija
-mkdir build
-cd build
-```
-2. Sugeneruojame projekto failus naudodami CMake:
-```
-cmake ..
-(čia naudojame "cmake ..", nes "CMakeLists.txt" failas yra aukštesnio lygio aplanke)
-```
-3. Kompliuojame programą Release režimu:
-```
-cmake --build . --config Release
-```
-4. Paleidžiame sukurtą programą:
-```
-.\v1.1.exe
-```
-#### Arba galite paleisti šiame projekte prikabintą `run.bat` failą:
-```run.bat``` failą galite paleisti paspaudę ant jo du kartus arba terminale įvedę komandą:
-```
-.\run.bat
-```
-```
-Instaliacijos reikalavimai: C++17 kompiliatorius; CMake VERSION >=3.10;
-```
+1. Atsisiunčiame `setup.exe` failą.
+2. Paspaudus ant `setup.exe` failo ir išokus instaliavimo lentelei spaudžiame mygtuką `Install`, o tuomet užbaigiame įdiegimo procesą su mytuku `Finish`.
+3. Atsisiųsta `"Lab3 programa"` programa instaliuojama į `C:/Program files/VU/Girius-Uscila` aplanką ir tampa prieinama per nuorodas `Desktop` bei `Start Meniu` aplanke VU->Girius-Uscila.
+4. Programą galime paleisti ją paspaudus per `Desktop` arba `Start Meniu` nuorodas.
 </details>
-
 <details>
   <summary><strong> Programos naudojimo instrukcija </strong></summary>
 
 ## Programos naudojimo instrukcija
 1. Įdiekite programą.
-2. Programai pradėjus veikti, naudotojas pasirenka iš Meniu norimą naudoti funkciją ir toliau seka Meniu aprašytais nurodymais.
+2. Paleidus programą per `Desktop` ar `Start Meniu` nuorodas, naudotojui pateikiama lentelė su įspėjimu, kad paleista programa gali atlikti veiksmus su Jūsų kompiuteriu, spauskite `taip`/`yes`.
+3. Programai pradėjus veikti, naudotojas pasirenka iš Meniu norimą naudoti funkciją ir toliau seka Meniu aprašytais nurodymais.
 ### Meniu
 * 1 - Įvesti studentų duomenis rankiniu būdu arba generuojant atsitiktinai;<br>
   * 1.1 - Pasirinkti norimą naudoti konteinerį ( vector arba list );<br>
@@ -83,12 +60,26 @@ Instaliacijos reikalavimai: C++17 kompiliatorius; CMake VERSION >=3.10;
           * pagal galutini vidurki mazejimo tvarka;\n";
           * failo nerusiuoti;<br>
         *Ekrane pateikiami greičio spartos analizės rezultatai, o failai "Vargsiukai.txt" ir "Kietiakai.txt" išsaugojami į aplanką "testavimo failai".*
-3. Programa nustoja veikti, kai yra išvedami rezultatai arba išvedama teksinė/informacinė eilutė, po vieno iš šių įvykių paspaudus bet kurį klaviatūros klavišą programa užsidaro.
-
+4. Programa nustoja veikti, kai yra išvedami rezultatai arba išvedama teksinė/informacinė eilutė, po vieno iš šių įvykių paspaudus, bet kurį klaviatūros klavišą programa užsidaro.
+</details>
+<details>
+  <summary><strong> Programos ištrynimo instrukcija </strong></summary>
+ 
+## Programos ištrynimo instrukcija
+1. Naudodami `Start Meniu` atsidarome `Settings`/`Nustatymai`.
+2. Naviguojame į `Apps`/`Programos` skiltį.
+3. Tuomet atsidarome `Installed apps`/`Įdiegtos programos` skiltį.
+4. Programų sąraše surandame programą `Lab3Setup` ir paspaudę ant trijų taškelių šalias jos, spaudžiame mygtuką `Uninstall`.
+5. Patvirtiname ištrynimą dar kartą paspausdami mygtuką `Uninstall`.
+6. Programa sėkmingai ištrinta.
 </details>
 
 ## Ankstesnės versijos
-[v0.1](https://github.com/guscila/objektinis/tree/v0.1-nauja)<br>
+### Lab1
+<details>
+  <summary><strong> Lab1 </strong></summary>
+  
+#### [v0.1](https://github.com/guscila/objektinis/tree/v0.1-nauja)<br>
 ```
 Dėl techninių nesklandumų įvykusių bandant įkelti didelio formato failus v0.1 yra v0.1-nauja šakoje bei trūksta dalies įvykdytų commit'ų.
 ```
@@ -98,6 +89,44 @@ Versija v0.1 optimizuota ir papildyta funkcija leidžiančia naudotojui sugeneru
 Versija v0.2 optimizuota ir papildyta galimybe pasirinkti norimą naudoti konteinerį; programa papildyta funkcija leidžiančia įvestų studentų duomenis išvesti į terminalą bei pateikianti jų saugojimo atmintyje adresus; programa papildyta Meniu struktūra ir detalesniu pasirinkimu; Timer'is papildytas saugojimo bei visų laiko trukmių išvedimo funkcijomis; failų spartos analizės funkcija papildyta studentų kategorizacijos bei išvedimo į failus spartos apskaičiavimu.
 #### [v1.0](https://github.com/guscila/objektinis/tree/v1.0) pokyčiai:
 Versija v0.3 optimizuota ir papildyta funkcija leidžiančiau naudotojui pasirinkti norimą naudoti studentų kategorizacijos strategiją; parengta įdiegimo instrukcija su `CMakeLists.txt` ir `run.bat`.
+<details>
+  <summary> Senoji programos diegimo instrukcija </summary>
+ 
+#### Senoji programos diegimo instrukcija
+1. Nukopijuojame projekto direktoriją ir paruošiame "build" direktoriją, kur nukeliaus visi mūsų sukurti failai:
+```
+cd projekto_direktorija
+mkdir build
+cd build
+```
+2. Sugeneruojame projekto failus naudodami CMake:
+```
+cmake ..
+(čia naudojame "cmake ..", nes "CMakeLists.txt" failas yra aukštesnio lygio aplanke)
+```
+3. Kompliuojame programą Release režimu:
+```
+cmake --build . --config Release
+```
+4. Paleidžiame sukurtą programą:
+```
+.\v1.1.exe
+```
+#### Arba galite paleisti šiame projekte prikabintą `run.bat` failą:
+```run.bat``` failą galite paleisti paspaudę ant jo du kartus arba terminale įvedę komandą:
+```
+.\run.bat
+```
+```
+Instaliacijos reikalavimai: C++17 kompiliatorius; CMake VERSION >=3.10;
+```
+</details>
+</details>
+
+### Lab2
+<details>
+  <summary><strong> Lab2 </strong></summary>
+  
 #### [v1.1](https://github.com/guscila/objektinis2/tree/v1.1) pokyčiai:
 Versija v1.0 optimizuota, o Studento struktūra pakeista Studento klase, ko pasekoje atliktas kodo pritaikymas klasėms.
 #### [v1.2](https://github.com/guscila/objektinis2/tree/v1.2) pokyčiai:
@@ -224,20 +253,32 @@ Versija v1.5 optimizuota; sukurtas ir pridėtas UnitTestTestavimas projektas, ku
 #### UnitTestTestavimas rezultatai:
 ![UnitTestTestavimoRezultatai](foto/UnitTesting.png)
 </details>
+</details>
+
+### Lab3
+<details>
+  <summary><strong> Lab3 </strong></summary>
+  
+#### [v3.0](https://github.com/guscila/objektinis3/tree/v3.0) pokyčiai:
+Versija v1.5 optimizuota; pridėtas [setup.exe](https://github.com/guscila/objektinis3/blob/v3.0/setup.exe) programos instaliacijos failas; atnaujintos programos diegimo ir naudojimo instrukcijos bei sukurta programos ištrynimo instrukcija.
+</details>
 
 ## Programos failai
 <details>
   <summary><strong> Failai </strong></summary>
  
 ### Failai:
-* v1.1 - pagrindinis programos failas;
+* v3.0 - pagrindinis programos failas;
 * funkcijos.h - programos funkcijų header'ių failas;
 * meniu.h - meniu struktūros failas;
-* studentas.h - studento struktūros failas;
+* studentas.h - studento klasės failas;
 * Timer.h - laiko skaičiavimo funkcijos Timer failas;
 * mylib.cpp - programos funkcijų failas;
+* zmogus.h - žmogaus klasės failas;
+* UnitTestTestavimas.cpp - testavimo kodo failas;
 * CMakeLists.txt - programos įdiegimo instrukcijos failas;
 * run.bat - programos paleidimo failas;
+* setup.exe - programos instaliacijos failas;
 </details>
 <details>
   <summary><strong> Formatai </strong></summary>
@@ -404,6 +445,7 @@ Pritaikius `std::partition` ir `std::make_move_iterator` algoritmus buvo sukurta
 | 1000000studentu.txt    | 4.323 s         | 2,248 s             | 0,241 s                 | 0,26 s                              | 0,179 s                              | 2,672 s                                        | 1,579 s                                        |
 | 10000000studentu.txt   | 42.89 s         | 22,458 s            | 3,067 s                 | 3,213 s                             | 2,09 s                               | 25,029 s                                       | 15,467 s                                       |
 <br>
+
 ### Testavimo laikai veiksmus atliektant su sąrašo (list) konteineriu:
 | Failas                 | Failo sukūrimas | Duomenų nuskaitymas | Studentų kategorizacija | *'Kietiakų'<sup>1</sup>* rūšiavimas | *'Vargšiukų'<sup>2</sup>* rūšiavimas | Išvedimas į failą (*'Kietiakai'<sup>1</sup>*)  | Išvedimas į failą (*'Vargšiukai'<sup>2</sup>*) |
 |:-----------------------|:----------------|:--------------------|:------------------------|:------------------------------------|:-------------------------------------|:-----------------------------------------------|:-----------------------------------------------|
